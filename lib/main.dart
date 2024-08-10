@@ -123,7 +123,7 @@ class MyAppThemeConfig {
       ));
 
   TextTheme get faPrimaryTextTheme => TextTheme(
-        bodyMedium: TextStyle(
+       bodyMedium: TextStyle(
             fontSize: 15,
             color: primaryTextColor,
             fontFamily: faPrimaryFontFamily),
@@ -257,6 +257,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text(localization.selectedLanguage),
                     CupertinoSlidingSegmentedControl<_Language>(
                         groupValue: _language,
+                        thumbColor: Colors.pink,
                         children: {
                           _Language.en: Text(localization.enLanguage),
                           _Language.fa: Text(localization.faLanguage)
@@ -274,7 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Skills",
+                      localization.skills,
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(
@@ -350,7 +351,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Personal Information",
+                      localization.personalInformation,
                       style: TextStyle(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(
@@ -358,7 +359,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'Email',
+                        labelText: localization.email,
                         prefixIcon: Icon(CupertinoIcons.at),
                       ),
                     ),
@@ -367,7 +368,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: localization.password,
                         prefixIcon: Icon(CupertinoIcons.lock),
                       ),
                     ),
@@ -379,7 +380,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 48,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('Save'),
+                        child: Text(localization.save),
                       ),
                     ),
                   ],
